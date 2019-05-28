@@ -5,8 +5,6 @@ pipeline {
     stage('CHECK ENVIRONMENT') {
       steps {
         bat label: '', script: 'IF EXIST C:\\Users\\alexz\\AppData\\Roaming\\npm SET PATH=%PATH%;C:\\Users\\alexz\\AppData\\Roaming\\npm'
-      }
-      steps {
         bat label: '', script: 'set'
       }
     }
