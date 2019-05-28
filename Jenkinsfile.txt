@@ -1,0 +1,19 @@
+pipeline {
+  agent any
+  
+  stages {
+    stage('CHECK ENVIRONMENT') {
+      steps {
+        bat label: '', script: 'echo Hello World'
+      }
+    }
+  }
+  post {
+    failure {
+      bat label: '', script: 'echo BUILD FAILED'
+    }
+    success {
+      bat label: '', script: 'echo BUILD FAILED'
+    }
+  }
+}
