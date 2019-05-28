@@ -4,16 +4,8 @@ pipeline {
   stages {
     stage('CHECK ENVIRONMENT') {
       steps {
-        bat label: '', script: 'echo Hello World'
+        bat label: '', script: 'tns --version'
       }
-    }
-  }
-  post {
-    failure {
-      bat label: '', script: 'echo BUILD FAILED'
-    }
-    success {
-      bat label: '', script: 'echo BUILD FAILED'
     }
   }
 }
